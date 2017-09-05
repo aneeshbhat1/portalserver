@@ -9,20 +9,21 @@ class Sessions extends Component {
         return
       case false:
         return (
-          <h2>Sorry, you are unauthorized to view this content, Please login!</h2>
+          <h2>
+            Sorry, you are unauthorized to view this content, Please login!
+          </h2>
         )
       default:
         return (
-          <h2>Sessions</h2>
+          <div>
+            <h2>Sessions</h2>
+            <Link to={"/dashboard"}>Dashboard</Link>
+          </div>
         )
     }
   }
   render() {
-    return (
-      <div>
-        {this.renderContent()}
-      </div>
-    )
+    return <div>{this.renderContent()}</div>
   }
 }
 
