@@ -1,0 +1,30 @@
+section.banner {
+    height: 450px;
+    background: url(../image/slider/slider-06.jpg);
+}
+.mega-menu .menu-links .active{
+	    color: #00a9da;	
+}
+.pad-135-t{padding-top: 135px;}
+.pad-60{padding: 180px 60px 120px}
+.particle_css_abs {
+    position: relative;
+}
+.bgColour {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    height: 450px;
+    overflow: hidden;
+    width: 100%;
+}
+.page-section-ptb-100 {
+    padding: 100px 0;
+}
+.page-section-ptb {
+    padding: 135px 0;
+}
+.mar-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
