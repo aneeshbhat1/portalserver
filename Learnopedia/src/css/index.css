@@ -1,7 +1,9 @@
 section.banner {
     height: 450px;
     background: url(../image/slider/slider-06.jpg);
+        background-size: cover;
 }
+
 .mega-menu .menu-links .active{
 	    color: #00a9da;	
 }

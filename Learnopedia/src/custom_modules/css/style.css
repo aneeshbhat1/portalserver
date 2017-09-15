@@ -2282,7 +2282,7 @@ ul.footer-instagram-images li{display:inline-block;}
 
 #logo_img{width:110px;}
 .mega-menu .menu-links > li:last-child{padding-right:20px;}
-.owl-carousel-1{padding-top:140px;}
+.owl-carousel-1{padding-top:170px;}
 .mega-menu .menu-links > li > a:hover{color:#027dd5;background:transparent;}
 .mega-menu .menu-links > li > a {
     margin: 0;
@@ -2297,8 +2297,10 @@ ul.footer-instagram-images li{display:inline-block;}
     text-transform: capitalize;
     background: transparent !important;
 }
-.bg-blue-gradient{
-	background: rgba(2,125,213,1) url('../../image/clusters/books_lib.png');
+.bg-blue-gradient {
+   background: rgba(2,125,213,1) url('../../image/clusters/books_lib.png');
+    background-position: center;
+    background-attachment: fixed;
 }
 a.button{
 	background: #006780;
