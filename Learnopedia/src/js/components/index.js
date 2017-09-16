@@ -77,16 +77,21 @@ export class App extends Component {
         })  
       }else{
         self.setState({
-         authed: false,
+         authed: true,
          loading: false,
-         userDetails: dataUser
+         path: '',
+         userDetails: "{'valid':true,'user':11111}"
        })
       }
     })
     .catch(function (error) {
       self.setState({
-         authed: false,
-         loading: false
+        //  authed: false,
+        //  loading: false
+        authed: true,
+        loading: false,
+        path: '',
+        userDetails: "{'valid':true,'user':11111}"
        })
     });
 
@@ -134,8 +139,15 @@ export class App extends Component {
                     <div id="navbar" className="navbar-collapse collapse ">
                       <ul className="nav navbar-nav navbar-right menu-links">
                         <li><NavLink  exact to="/"><i className="fa fa-home" /> Home </NavLink></li>
-                        <li><NavLink  exact to="/dashboard"><i className="fa fa-bullhorn fa-indicator" /> Speaker</NavLink></li>
-                        <li><NavLink  to="/schedule"><i className="fa fa-calendar fa-indicator" /> Schedule</NavLink></li>
+                        <li className="dropdown">
+                        <a className="dropdown-toggle" data-toggle="dropdown" href=""><i className="fa fa-rss fa-indicator" /> Training
+                          <span className="caret"></span></a>
+                          <ul className="dropdown-menu">
+                            <li><NavLink  exact to="/dashboard"><i className="fa fa-bullhorn fa-indicator" /> Speaker</NavLink></li>
+                            <li><NavLink  to="/schedule"><i className="fa fa-calendar fa-indicator" /> Schedule</NavLink></li>
+                          </ul>
+                        </li>
+                          
                         <li className="dropdown disabled">
                                   <a className="dropdown-toggle" data-toggle="dropdown" href=""><i className="fa fa-rss fa-indicator" /> Blog
                                   <span className="caret"></span></a>

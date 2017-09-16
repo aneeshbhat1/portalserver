@@ -13,7 +13,9 @@ export class Banner extends Component {
            <div className="owl-carousel-1">
              <div className="item">
                <div className="slider-contents container slide-1 text-center">
-                 <h2 className="text-white text-uppercase">How you can become a mobile app developer ?</h2>
+                 <h2 className="text-white text-uppercase">Let us learn together and laugh 
+                 together and work together, confident that in the end we will triumph together in the right.
+                 </h2>
                  <p className="text-white">We are a creative company, who works with passion and love</p>
                  <a href="" className="button"><span>Upcoming Events</span> <i className="fa fa-calendar" /></a>
                  <a href="" className="button button-white"><span>Discover more</span> <i className="fa fa-eye" /></a>

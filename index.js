@@ -4,6 +4,7 @@ const cookieSession = require("cookie-session")
 const passport = require("passport")
 const keys = require("./config/keys")
 require("./models/User")
+require("./models/Training")
 require("./services/passport")
 
 mongoose.connect(keys.mongoURI)
@@ -21,6 +22,11 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 require("./routes/authRoutes")(app)
+require("./routes/trainingRoutes")(app)
+require("./routes/quoteRoutes")(app)
+require("./routes/eventRoutes")(app)
+require("./routes/speakerRoutes")(app)
+
 
 if (process.env.NODE_ENV === "production") {
   // Express to serve static files

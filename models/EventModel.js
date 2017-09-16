@@ -8,16 +8,18 @@ var eventSchema=mongoose.Schema({
   Name:String,
   EventDate:Date,
   Duration:Number,
-  Type:String,
-  Topic:String,
-  Title:String,
+  Type:String, // Technical, Infrastructure, SoftSkills
+  Tags:[String], // Web, Mobile, App etc
+  Level: Number, // Begineer, Intermediate, Advanced
   Host:{ type: mongoose.Schema.Types.ObjectId, ref: 'Attendee' },
   DetailedDescription:String,
   MaxAttendees:Number,
   Venue:{ type: mongoose.Schema.Types.ObjectId, ref: 'Address' },
   Attendees:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Attendee' }],
   Feedback:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Feedback' }],
-  Queries:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Query' }]
+  //EvaluationQuestions:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Query' }],
+  CourseContent: String,
+  RecordedVideo: String
 });
 
 var eventModel=mongoose.model('Event',eventSchema);

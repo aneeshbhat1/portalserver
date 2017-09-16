@@ -10,7 +10,7 @@ export const closeGeod = () => ({
   type: 'CLOSE_GEOD',
 });
 
-export const userName = 12345;
+export const userName = 11111;
 
 // reducers.js
 export const geod = (state = {}, action) => {

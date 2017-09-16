@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/parthi22/portalserver#readme",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "concurrently": "^3.5.0",
     "cookie-session": "^1.3.1",
     "express": "^4.15.4",
