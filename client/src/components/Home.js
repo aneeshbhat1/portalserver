@@ -5,6 +5,9 @@ import {Banner} from './support/banner.js'
 import client1 from '../image/clients/01.png';
 import client2 from '../image/clients/02.png';
 
+
+
+
 class Home extends Component {
   componentDidMount() {
     this.props.fetchQuote();
@@ -45,63 +48,305 @@ class Home extends Component {
         <Banner/>
         {/*Quote: {this.renderQuoteContent()}*/}
         {/*Future Events: {this.renderTimeLineContent()}*/}
-                <section className="ovr-hid page-section-ptb-20 bg-blue-gradient book-clusters">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-12 col-md-12">
-                        <div className="section-title-1 text-center">
-                          <h1 className="text-white">Where can I get some?</h1>
-                          <div className="title-line" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-6 col-md-6 text-white">
-                        <div className="custom-content">
-                          <h3 className="text-white">We know the secret of ultimate success</h3>
-                          <b>Start now! Your big opportunity may be right where you are! </b>
-                          <p className="mt-30 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing eli. Vero quod conseqt quibusdam enim expedita sed quia nesciunt incidunt accusamus necessitatibus modi adipisci officia libero accusantium esse hic obcaecati.
-                            <br />
-                            <br /> Roin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
-                          <a href="" className="button mt-20"><span>Learn More</span><i className="fa fa-hand-o-right" /></a>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6">
-                        <div className="js-video [youtube, widescreen]">
-                          <iframe title="Data" src="https://www.youtube.com/embed/XxVg_s8xAms?ecver=2" frameBorder={0} allowFullScreen />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-6 col-md-6">
-                        <div className="clients-box mb-30 clearfix">
-                          <div className="clients-photo">
-                            <img src={client1} alt="" />
-                          </div>
-                          <div className="clients-info">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <a href=""> URL <i className="fa fa-link" />More details</a>
-                            <p>Lorem ipsum dolor sit amet of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-6">
-                        <div className="clients-box mb-30 clearfix">
-                          <div className="clients-photo">
-                            <img src={client2} alt="" />
-                          </div>
-                          <div className="clients-info">
-                            <h4>Lorem ipsum dolor sit amet</h4>
-                            <a href=""> URL <i className="fa fa-link" />More details</a>
-                            <p>Lorem ipsum dolor sit amet of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+         <section className="white-bg blog page-section-ptb"> 
+           <div className="container">
+             <div className="row">
+               <div className="container">
+                 <ul className="timeline">
+                   <li className="entry-date"> <span> October 2015 </span></li> 
+                   {/* =========================================== */}
+                   <li>
+                     <div className="timeline-badge primary"><a>21 <span>Dec</span></a></div>
+                     <div className="timeline-panel">
+                       <div className="blog-entry post-2">
+                         <div className="entry-title mt-30 mb-20">
+                           <i className="fa fa-file-video-o" />
+                           <h4>Mobile development</h4>
+                         </div>
+                         <div className="entry-meta">
+                           <a href=""><i className="fa fa-user" /> By the Shiva</a>
+                           <a href=""><i className="fa fa-comments-o" /> 5 Comments</a>
+                           <a href=""><i className="fa fa-folder-open" /> Design/Graphics</a>
+                         </div>
+                         <div className="entry-content mt-20 mb-30">
+                           <p>Lorem ipsum dolor sit amet  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt pharetra.</p>
+                         </div>
+                         <div className="entry-share clearfix">
+                           <a className="button-small pull-left" href="">
+                             <span>Read More</span>
+                             <i className="fa fa-hand-o-right" />
+                           </a>
+                           <div className="share small pull-right">
+                             <a className="share-button" href="">
+                               <i className="fa fa-share-alt" />
+                             </a>
+                             <ul>
+                               <li><a href=""><i className="fa fa-facebook" /></a></li>
+                               <li> <a href=""><i className="fa fa-twitter" /></a></li>
+                               <li><a href=""><i className="fa fa-dribbble" /></a></li>
+                               <li><a href=""><i className="fa fa-vimeo" /></a></li>
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </li>
+                   {/* =========================================== */}
+                   <li className="timeline-inverted">
+                     <div className="timeline-badge primary"><a>21 <span>Dec</span></a></div>
+                     <div className="timeline-panel">
+                       <div className="blog-entry post-2">
+                         <div className="entry-title mt-30 mb-20">
+                           <i className="fa fa-file-audio-o" />
+                           <h4>Sourcebits mobile app</h4>
+                         </div>
+                         <div className="entry-meta">
+                           <a href=""><i className="fa fa-user" /> By the Shiva</a>
+                           <a href=""><i className="fa fa-comments-o" /> 5 Comments</a>
+                           <a href=""><i className="fa fa-folder-open" /> Design/Graphics</a>
+                         </div>
+                         <div className="entry-content mt-20 mb-30">
+                           <p>Lorem ipsum dolor sit amet  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt pharetra.</p>
+                         </div>
+                         <div className="entry-share clearfix">
+                           <a className="button-small pull-left" href="">
+                             <span>Read More</span>
+                             <i className="fa fa-hand-o-right" />
+                           </a>
+                           <div className="share small pull-right">
+                             <a className="share-button" href="">
+                               <i className="fa fa-share-alt" />
+                             </a>
+                             <ul>
+                               <li><a href=""><i className="fa fa-facebook" /></a></li>
+                               <li> <a href=""><i className="fa fa-twitter" /></a></li>
+                               <li><a href=""><i className="fa fa-dribbble" /></a></li>
+                               <li><a href=""><i className="fa fa-vimeo" /></a></li>
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </li>
+                   {/* =========================================== */}
+                   <li>
+                     <div className="timeline-badge primary"><a>21 <span>Dec</span></a></div>
+                     <div className="timeline-panel">
+                       <div className="blog-entry post-1">
+                         
+                         <div className="entry-title mt-30 mb-20">
+                           <i className="fa fa-th" />
+                           <h4>IBM Mobility Services</h4>
+                         </div>
+                         <div className="entry-meta">
+                           <a href=""><i className="fa fa-user" /> By the Shiva</a>
+                           <a href=""><i className="fa fa-comments-o" /> 5 Comments</a>
+                           <a href=""><i className="fa fa-folder-open" /> Design/Graphics</a>
+                         </div>
+                         <div className="entry-content mt-20 mb-30">
+                           <p>Lorem ipsum dolor sit amet  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt pharetra.</p>
+                         </div>
+                         <div className="entry-share clearfix">
+                           <a className="button-small pull-left" href="">
+                             <span>Read More</span>
+                             <i className="fa fa-hand-o-right" />
+                           </a>
+                           <div className="share small pull-right">
+                             <a className="share-button" href="">
+                               <i className="fa fa-share-alt" />
+                             </a>
+                             <ul>
+                               <li><a href=""><i className="fa fa-facebook" /></a></li>
+                               <li> <a href=""><i className="fa fa-twitter" /></a></li>
+                               <li><a href=""><i className="fa fa-dribbble" /></a></li>
+                               <li><a href=""><i className="fa fa-vimeo" /></a></li>
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </li>
+                   {/* =========================================== */}
+                   <li className="timeline-inverted">
+                     <div className="timeline-badge primary"><a>21 <span>Dec</span></a></div>
+                     <div className="timeline-panel">
+                       <div className="blog-entry post-1">
+                         <div className="blog-entry-you-tube">
+                           <div className="js-video [youtube, widescreen]">
+                             <iframe title="youtube" src="https://www.youtube.com/embed/GnABUxgUsDs" frameBorder={0}></iframe>
+                           </div>
+                         </div>
+                         <div className="entry-title mt-30 mb-20">
+                           <i className="fa fa-youtube" />
+                           <h4>Speech-to-Speech Translation</h4>
+                         </div>
+                         <div className="entry-meta">
+                           <a href=""><i className="fa fa-user" /> By the Shiva</a>
+                           <a href=""><i className="fa fa-comments-o" /> 5 Comments</a>
+                           <a href=""><i className="fa fa-folder-open" /> Design/Graphics</a>
+                         </div>
+                         <div className="entry-content mt-20 mb-30">
+                           <p>Lorem ipsum dolor sit amet  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt pharetra.</p>
+                         </div>
+                         <div className="entry-share clearfix">
+                           <a className="button-small pull-left" href="">
+                             <span>Read More</span>
+                             <i className="fa fa-hand-o-right" />
+                           </a>
+                           <div className="share small pull-right">
+                             <a className="share-button" href="">
+                               <i className="fa fa-share-alt" />
+                             </a>
+                             <ul>
+                               <li><a href=""><i className="fa fa-facebook" /></a></li>
+                               <li> <a href=""><i className="fa fa-twitter" /></a></li>
+                               <li><a href=""><i className="fa fa-dribbble" /></a></li>
+                               <li><a href=""><i className="fa fa-vimeo" /></a></li>
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </li>
+                   {/* =========================================== */}
+                   <li>
+                     <div className="timeline-badge primary"><a>21 <span>Dec</span></a></div>
+                     <div className="timeline-panel">
+                       <div className="blog-entry post-1">
+                         <div className="blog-entry-vimeo">
+                           <div className="js-video [vimeo, widescreen]">
+                             <iframe title="vimeo" src="http://player.vimeo.com/video/155052941" frameBorder={0}  />
+                           </div>
+                         </div>
+                         <div className="entry-title mt-30 mb-20">
+                           <i className="fa fa-vimeo-square" />
+                           <h4>Salesforce development</h4>
+                         </div>
+                         <div className="entry-meta">
+                           <a href=""><i className="fa fa-user" /> By the Shiva</a>
+                           <a href=""><i className="fa fa-comments-o" /> 5 Comments</a>
+                           <a href=""><i className="fa fa-folder-open" /> Design/Graphics</a>
+                         </div>
+                         <div className="entry-content mt-20 mb-30">
+                           <p>Lorem ipsum dolor sit amet  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt pharetra.</p>
+                         </div>
+                         <div className="entry-share clearfix">
+                           <a className="button-small pull-left" href="">
+                             <span>Read More</span>
+                             <i className="fa fa-hand-o-right" />
+                           </a>
+                           <div className="share small pull-right">
+                             <a className="share-button" href="">
+                               <i className="fa fa-share-alt" />
+                             </a>
+                             <ul>
+                               <li><a href=""><i className="fa fa-facebook" /></a></li>
+                               <li> <a href=""><i className="fa fa-twitter" /></a></li>
+                               <li><a href=""><i className="fa fa-dribbble" /></a></li>
+                               <li><a href=""><i className="fa fa-vimeo" /></a></li>
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </li>
+                   {/* =========================================== */}
+                   <li className="timeline-inverted">
+                     <div className="timeline-badge primary"><a>21 <span>Dec</span></a></div>
+                     <div className="timeline-panel">
+                       <div className="blog-entry post-1">
+                         <div className="blog-entry-quote">
+                           <blockquote className="entry-quote">
+                             <i className="fa fa-quote-left" /> 
+                             <p>Lorem ipsum dolor sit amet  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt pharetra.</p>
+                             <div className="quote-author text-right">
+                               <a href>- Parthiban</a>
+                             </div>
+                           </blockquote>
+                         </div>
+                         <div className="entry-title mt-30 mb-20">
+                           <i className="fa fa-quote-left" />
+                           <h4>ReactJS development</h4>
+                         </div>
+                         <div className="entry-meta">
+                           <a href=""><i className="fa fa-user" /> By the Shiva</a>
+                           <a href=""><i className="fa fa-comments-o" /> 5 Comments</a>
+                           <a href=""><i className="fa fa-folder-open" /> Design/Graphics</a>
+                         </div>
+                         <div className="entry-content mt-20 mb-30">
+                           <p>Lorem ipsum dolor sit amet  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt pharetra.</p>
+                         </div>
+                         <div className="entry-share clearfix">
+                           <a className="button-small pull-left" href="">
+                             <span>Read More</span>
+                             <i className="fa fa-hand-o-right" />
+                           </a>
+                           <div className="share small pull-right">
+                             <a className="share-button" href="">
+                               <i className="fa fa-share-alt" />
+                             </a>
+                             <ul>
+                               <li><a href=""><i className="fa fa-facebook" /></a></li>
+                               <li> <a href=""><i className="fa fa-twitter" /></a></li>
+                               <li><a href=""><i className="fa fa-dribbble" /></a></li>
+                               <li><a href=""><i className="fa fa-vimeo" /></a></li>
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </li>
+                   {/* =========================================== */}
+                   <li>
+                     <div className="timeline-badge primary"><a>21 <span>Dec</span></a></div>
+                     <div className="timeline-panel">
+                       <div className="blog-entry post-1">
+                         <div className="entry-title mt-30 mb-20">
+                           <i className="fa fa-file-text-o" />
+                           <h4>Mobile Salesforce Develeopent</h4>
+                         </div>
+                         <div className="entry-meta">
+                           <a href=""><i className="fa fa-user" /> By the Shiva</a>
+                           <a href=""><i className="fa fa-comments-o" /> 5 Comments</a>
+                           <a href=""><i className="fa fa-folder-open" /> Design/Graphics</a>
+                         </div>
+                         <div className="entry-content mt-20 mb-30">
+                           <p>Lorem ipsum dolor sit amet  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt pharetra.
+                             <br />
+                             <br />
+                             Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+                             Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. 
+                           </p>
+                         </div>
+                         <div className="entry-share clearfix">
+                           <a className="button-small pull-left" href="">
+                             <span>Read More</span>
+                             <i className="fa fa-hand-o-right" />
+                           </a>
+                           <div className="share small pull-right">
+                             <a className="share-button" href="">
+                               <i className="fa fa-share-alt" />
+                             </a>
+                             <ul>
+                               <li><a href=""><i className="fa fa-facebook" /></a></li>
+                               <li> <a href=""><i className="fa fa-twitter" /></a></li>
+                               <li><a href=""><i className="fa fa-dribbble" /></a></li>
+                               <li><a href=""><i className="fa fa-vimeo" /></a></li>
+                             </ul>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </li>
+                   {/* =========================================== */}
+                   <li className="entry-date-bottom"> <a href="">Load more...</a></li> 
+                   {/* =========================================== */}
+                   <li className="clearfix" style={{float: 'none'}} />
+                 </ul>
+               </div>
+             </div>
+           </div>  
+         </section>
       </div>
     )
   }
