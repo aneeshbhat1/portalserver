@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { BrowserRouter, Route } from "react-router-dom"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { connect } from "react-redux"
 import * as actions from "../actions"
 
@@ -11,6 +11,7 @@ import InfrastructureTopic from "./InfrastructureTopic"
 import SoftskillTopic from "./SoftskillTopic"
 import Speakers from "./Speakers"
 import Contact from "./Contact"
+import PageNotFound from "./PageNotFound"
 
 class App extends Component {
   componentDidMount() {
@@ -22,12 +23,15 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <Route exact path="/" component={Home} />
-            <Route exact path="/topics/technology" component={TechnologyTopic} />
-            <Route exact path="/topics/infrastructure" component={InfrastructureTopic} />
-            <Route exact path="/topics/softskills" component={SoftskillTopic} />
-            <Route exact path="/speakers" component={Speakers} />
-            <Route exact path="/contact" component={Contact} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/topics/technology" component={TechnologyTopic} />
+              <Route exact path="/topics/infrastructure" component={InfrastructureTopic} />
+              <Route exact path="/topics/softskills" component={SoftskillTopic} />
+              <Route exact path="/speakers" component={Speakers} />
+              <Route exact path="/contact" component={Contact} />
+              <Route component={PageNotFound} />
+            </Switch>
             <Footer />
           </div>
         </BrowserRouter>
