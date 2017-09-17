@@ -171,7 +171,7 @@ class Home extends Component {
                 )
               })}
               {/* =========================================== */}
-              <li className="entry-date-bottom">
+              <li className="entry-date-bottom disabled">
                 {" "}
                 <a href="">Load more...</a>
               </li>
