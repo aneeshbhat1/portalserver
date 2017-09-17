@@ -1,35 +1,12 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import * as actions from "../actions"
-import { Banner } from "./support/banner.js"
-import client1 from "../image/clients/01.png"
-import client2 from "../image/clients/02.png"
 
-class Home extends Component {
-  state = { eventMonth: "" }
+class TimeLine extends Component {
   componentDidMount() {
-    this.props.fetchQuote()
     this.props.fetchFutureEvents()
-    this.props.fetchSpeakers()
   }
-  getMonthAndYear(date) {
-    let months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ]
-    let formattedDate = new Date(date)
-    return months[formattedDate.getMonth()] + " " + formattedDate.getFullYear()
-  }
+
   getShortDateAndMonth(date) {
     let shortMonths = [
       "Jan",
@@ -51,30 +28,7 @@ class Home extends Component {
       shortMonth: shortMonths[formattedDate.getMonth()]
     }
   }
-  renderQuoteContent() {
-    switch (this.props.quote) {
-      case null:
-        return
-      case false:
-        return
-      default:
-        return <div>{this.props.quote.text}</div>
-    }
-  }
-  renderTimeLineHeader(date) {
-    let my = this.getMonthAndYear(date)
-    if (this.state.eventMonth === my) {
-      return
-    } else {
-      this.setState({ eventMonth: my })
-      return (
-        <li className="entry-date">
-          {" "}
-          <span> {my} </span>
-        </li>
-      )
-    }
-  }
+
   renderTimeLineContent() {
     switch (this.props.eventList) {
       case null:
@@ -91,7 +45,10 @@ class Home extends Component {
               </li>
               {this.props.eventList.map((event, index) => {
                 return (
-                  <li key={index} className={index % 2 === 0 ? "" : "timeline-inverted"}>
+                  <li
+                    key={index}
+                    className={index % 2 === 0 ? "" : "timeline-inverted"}
+                  >
                     <div className="timeline-badge primary">
                       <a>
                         {this.getShortDateAndMonth(event.EventDate).date}{" "}
@@ -184,22 +141,17 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
-        <Banner />
-        {/*Quote: {this.renderQuoteContent()}*/}
-        {/*Future Events: {this.renderTimeLineContent()}*/}
-        <section className="white-bg blog page-section-ptb">
-          <div className="container">
-            <div className="row">{this.renderTimeLineContent()}</div>
-          </div>
-        </section>
-      </div>
+      <section className="white-bg blog page-section-ptb">
+        <div className="container">
+          <div className="row">{this.renderTimeLineContent()}</div>
+        </div>
+      </section>
     )
   }
 }
 
-function mapStateToProps({ auth, quote, eventList }) {
-  return { auth, quote, eventList }
+function mapStateToProps({ eventList }) {
+  return { eventList }
 }
 
-export default connect(mapStateToProps, actions)(Home)
+export default connect(mapStateToProps, actions)(TimeLine)
