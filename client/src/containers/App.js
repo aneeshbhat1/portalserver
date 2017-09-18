@@ -6,10 +6,9 @@ import * as actions from "../actions"
 import Header from "./Header"
 import Home from "./Home"
 import Footer from "./Footer"
-import TechnologyTopic from "./TechnologyTopic"
-import InfrastructureTopic from "./InfrastructureTopic"
+import Speaker from "./Training/Speaker"
+import Topic from "./Training/Topic"
 import SoftskillTopic from "./SoftskillTopic"
-import Speakers from "./Speakers"
 import Contact from "./Contact"
 import PageNotFound from "./PageNotFound"
 
@@ -25,10 +24,10 @@ class App extends Component {
             <Header />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/topics/technology" component={TechnologyTopic} />
-              <Route exact path="/topics/infrastructure" component={InfrastructureTopic} />
+              <Route exact path="/training/speakers" component={Speaker} />
+              <Route exact path="/training/topics" component={Topic} />
               <Route exact path="/topics/softskills" component={SoftskillTopic} />
-              <Route exact path="/speakers" component={Speakers} />
+              <Route exact path="/speakers" component={Speaker} />
               <Route exact path="/contact" component={Contact} />
               <Route component={PageNotFound} />
             </Switch>

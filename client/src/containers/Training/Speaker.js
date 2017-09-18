@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import * as actions from "../actions"
+import * as actions from "../../actions"
 
 class Speakers extends Component {
   componentDidMount() {
@@ -37,7 +37,7 @@ class Speakers extends Component {
                           <div className="team-2-box">
                             <img
                               className="img-responsive"
-                              src={require("../image/speaker/01.jpg")}
+                              src={require("../../image/speaker/01.jpg")}
                               alt=""
                             />
                             <div className="team-overlay text-center">

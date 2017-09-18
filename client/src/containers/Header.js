@@ -20,16 +20,14 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google">Login with google</a>
+            <a href="/auth/google"><i className="fa fa-google" aria-hidden="true"></i> Login with google</a>
           </li>
         )
       default:
         return (
-          <div>
             <li>
-              <a href="/api/logout">Logout</a>
+              <a href="/api/logout"><i className="fa fa-power-off" aria-hidden="true"></i> Logout</a>
             </li>
-          </div>
         )
     }
   }
@@ -51,9 +49,16 @@ class Header extends Component {
                 <div id="navbar" className="navbar-collapse collapse ">
                   <ul className="nav navbar-nav navbar-right menu-links">
                     <li><NavLink  exact to="/"><i className="fa fa-home" /> Home </NavLink></li>
-                    <li><NavLink  exact to="/topics/technology"><i className="fa fa-bullhorn fa-indicator" /> Technology</NavLink></li>
-                    <li><NavLink  to="/topics/infrastructure"><i className="fa fa-calendar fa-indicator" /> Infrastructure</NavLink></li>
                     <li className="dropdown disabled">
+                      <a className="dropdown-toggle" data-toggle="dropdown" href=""><i className="fa fa-rss fa-binoculars" /> Training
+                      <span className="caret"></span></a>
+                      <ul className="dropdown-menu">
+                        <li><NavLink  exact to="/training/speakers"><i className="fa fa-bullhorn fa-indicator" /> Speaker</NavLink></li>
+                        <li><NavLink  exact to="/training/topics"><i className="fa fa-bullhorn fa-suitcase" /> Topics</NavLink></li>
+                      </ul>
+                    </li>
+                    <li><NavLink  to="/topics/infrastructure"><i className="fa fa-calendar fa-indicator" /> Infrastructure</NavLink></li>
+                    <li className="dropdown">
                               <a className="dropdown-toggle" data-toggle="dropdown" href=""><i className="fa fa-rss fa-indicator" /> Blog
                               <span className="caret"></span></a>
                               <ul className="dropdown-menu">
@@ -63,6 +68,7 @@ class Header extends Component {
                               </ul>
                             </li>
                     <li><NavLink  to="/contact"><i className="fa fa-envelope-o fa-indicator" /> Contact</NavLink></li>
+                    {this.renderContent()}
                   </ul>
                 </div>{/*/.nav-collapse */}
               </div>
@@ -75,4 +81,6 @@ class Header extends Component {
 function mapStateToProps({ auth }) {
   return { auth }
 }
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps,null, null, {
+  pure: false
+})(Header)
