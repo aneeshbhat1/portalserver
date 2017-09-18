@@ -49,7 +49,7 @@ class Header extends Component {
                 <div id="navbar" className="navbar-collapse collapse ">
                   <ul className="nav navbar-nav navbar-right menu-links">
                     <li><NavLink  exact to="/"><i className="fa fa-home" /> Home </NavLink></li>
-                    <li className="dropdown disabled">
+                    <li className="dropdown">
                       <a className="dropdown-toggle" data-toggle="dropdown" href=""><i className="fa fa-rss fa-binoculars" /> Training
                       <span className="caret"></span></a>
                       <ul className="dropdown-menu">
@@ -57,17 +57,10 @@ class Header extends Component {
                         <li><NavLink  exact to="/training/topics"><i className="fa fa-bullhorn fa-suitcase" /> Topics</NavLink></li>
                       </ul>
                     </li>
-                    <li><NavLink  to="/topics/infrastructure"><i className="fa fa-calendar fa-indicator" /> Infrastructure</NavLink></li>
-                    <li className="dropdown">
-                              <a className="dropdown-toggle" data-toggle="dropdown" href=""><i className="fa fa-rss fa-indicator" /> Blog
-                              <span className="caret"></span></a>
-                              <ul className="dropdown-menu">
-                                <li><a href="">Blog 1-1</a></li>
-                                <li><a href="">Blog 1-2</a></li>
-                                <li><a href="">Blog 1-3</a></li>
-                              </ul>
+                    <li className="dropdown disabled">
+                              <a className="dropdown-toggle" data-toggle="dropdown" href=""><i className="fa fa-rss fa-indicator" /> Blog</a>
                             </li>
-                    <li><NavLink  to="/contact"><i className="fa fa-envelope-o fa-indicator" /> Contact</NavLink></li>
+                    <li className="disabled"><NavLink  to="/contact"><i className="fa fa-envelope-o fa-indicator" /> Contact</NavLink></li>
                     {this.renderContent()}
                   </ul>
                 </div>{/*/.nav-collapse */}

@@ -9,7 +9,187 @@ class Speakers extends Component {
   renderSpeakerContent() {
     switch (this.props.speakerList) {
       case null:
-        return
+        return (
+            <div>
+            <section className="white-bg pad-135-t">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-12 col-md-12">
+                    <div className="section-title-1 text-center">
+                      <h1 className="text-blue"><span className="border-animated border-center" style={{width: '200px'}} ></span></h1>
+                      <p><span className="border-animated border-center" style={{width: '600px'}} ></span></p>
+                      <h1 className="mt-10"><span className="border-animated border-center" style={{width: '350px'}} ></span></h1>
+                    </div>
+                  </div>
+                </div>
+                <div className="team-2">
+                  <div className="row">
+                   <div className="col-lg-6 col-md-3 col-sm-6 mar-10" >
+                     <div className="row">
+                      <div className="col-md-6">
+                        <div className="team-2-box">
+                          <span className="border-animated border-center" style={{width: '600px', height: '150px'}} ></span>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <p><span className="border-animated border-left" style={{width: '100%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '70%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '60%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '100%'}} ></span></p>
+                      </div>
+                     </div>
+                   </div>
+                   <div className="col-lg-6 col-md-3 col-sm-6 mar-10" >
+                     <div className="row">
+                      <div className="col-md-6">
+                        <div className="team-2-box">
+                          <span className="border-animated border-center" style={{width: '600px', height: '150px'}} ></span>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <p><span className="border-animated border-left" style={{width: '100%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '70%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '60%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '100%'}} ></span></p>
+                      </div>
+                     </div>
+                   </div>
+                  </div>
+                  <div className="row mt-20">
+                   <div className="col-lg-6 col-md-3 col-sm-6 mar-10" >
+                     <div className="row">
+                      <div className="col-md-6">
+                        <div className="team-2-box">
+                          <span className="border-animated border-center" style={{width: '600px', height: '150px'}} ></span>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <p><span className="border-animated border-left" style={{width: '100%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '70%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '60%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '100%'}} ></span></p>
+                      </div>
+                     </div>
+                   </div>
+                   <div className="col-lg-6 col-md-3 col-sm-6 mar-10" >
+                     <div className="row">
+                      <div className="col-md-6">
+                        <div className="team-2-box">
+                          <span className="border-animated border-center" style={{width: '600px', height: '150px'}} ></span>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <p><span className="border-animated border-left" style={{width: '100%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '70%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '60%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '100%'}} ></span></p>
+                      </div>
+                     </div>
+                   </div>
+                  </div>
+                  <div className="row mt-20">
+                   <div className="col-lg-6 col-md-3 col-sm-6 mar-10" >
+                     <div className="row">
+                      <div className="col-md-6">
+                        <div className="team-2-box">
+                          <span className="border-animated border-center" style={{width: '600px', height: '150px'}} ></span>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <p><span className="border-animated border-left" style={{width: '100%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '70%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '60%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '100%'}} ></span></p>
+                      </div>
+                     </div>
+                   </div>
+                   <div className="col-lg-6 col-md-3 col-sm-6 mar-10" >
+                     <div className="row">
+                      <div className="col-md-6">
+                        <div className="team-2-box">
+                          <span className="border-animated border-center" style={{width: '600px', height: '150px'}} ></span>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <p><span className="border-animated border-left" style={{width: '100%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '70%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '60%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '100%'}} ></span></p>
+                      </div>
+                     </div>
+                   </div>
+                  </div>
+                  <div className="row mt-20">
+                   <div className="col-lg-6 col-md-3 col-sm-6 mar-10" >
+                     <div className="row">
+                      <div className="col-md-6">
+                        <div className="team-2-box">
+                          <span className="border-animated border-center" style={{width: '600px', height: '150px'}} ></span>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <p><span className="border-animated border-left" style={{width: '100%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '70%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '60%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '100%'}} ></span></p>
+                      </div>
+                     </div>
+                   </div>
+                   <div className="col-lg-6 col-md-3 col-sm-6 mar-10" >
+                     <div className="row">
+                      <div className="col-md-6">
+                        <div className="team-2-box">
+                          <span className="border-animated border-center" style={{width: '600px', height: '150px'}} ></span>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <p><span className="border-animated border-left" style={{width: '100%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '70%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '60%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '80%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '90%'}} ></span></p>
+                        <p><span className="border-animated border-left mt-10" style={{width: '100%'}} ></span></p>
+                      </div>
+                     </div>
+                   </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+          </div>
+          )
+        debugger;
       case false:
         return
       default:
@@ -58,7 +238,6 @@ class Speakers extends Component {
         )
     }
   }
-
   render() {
     return <div>{this.renderSpeakerContent()}</div>
   }

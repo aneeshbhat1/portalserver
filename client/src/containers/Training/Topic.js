@@ -1,8 +1,77 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 
+const posts = [
+   {
+      "TopicName" : "Mobile Development",
+      "catagory" : "Catagory: Design/Dev",
+      "image" : "01",
+      "link" : "marksmith",
+      "content" : "Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
+   },
+   {
+      "TopicName" : "Web Development",
+      "catagory" : "Catagory: Design/Dev",
+      "image" : "01",
+      "link" : "marksmith",
+      "content" : "Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
+   }
+];
+
+function LearningTopicsModel(props) {
+
+}
+
+function LearningTopicsMap(props) {
+	function handleClick(pro, post) {
+	    //e.preventDefault();
+
+	    console.log('The link was clicked.' + pro);
+	}
+  const content = props.posts.map((post,index) =>
+    <div className="col-lg-6 col-md-6 col-sm-6 team mb-20" onClick={() => handleClick(index, post)}  key={index}>
+	    <div className="row">
+	    	<div className="col-md-4">
+	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
+	    	</div>
+	    	<div className="col-md-8">
+	    		<div className="text-center">
+	    		    <div className="team-description">
+	    		        <h4>{post.TopicName}</h4>
+	    		        <span>{post.catagory}</span>
+                  <p><b>Duration:</b> 1hour 30minites</p>
+                  <div className="tags"> <p><b>Tag:</b> </p>
+                     <ul>
+                      <li><a href="#">Bootstrap</a></li>
+                      <li><a href="#">HTML5</a></li>
+                      <li><a href="#">Wordpress</a></li>
+                    </ul>
+                  </div>
+                  <p><b>Level:</b> Beginner</p>
+                  <p><b>Host:</b> Parthiban</p>
+                  <p><b>About:</b> {post.content}</p>
+                  <p><b>Seats left:  <span>10</span></b></p>
+                  <p><b>Venue:</b> Dark Room</p>
+	    		        <a className="button-small pull-right"href=''><span>Enroll now</span><i className="fa fa-hand-o-right" /></a>
+	    		    </div>
+	    		</div>
+
+	    	</div>
+
+	    </div>
+	</div>
+  );
+  return (
+    <div>
+      {content}
+    </div>
+  );
+}
+
+ // data-toggle="modal" data-target="#myModal" // don' delete
 class Topic extends Component {
   render() {
+  	console.log(this.props)
     return (
       <section className="white-bg pad-135-t">
         <div className="container">
@@ -11,179 +80,8 @@ class Topic extends Component {
 	          <div className="title-line" />
 	          <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
 	        </div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
-        	<div className="col-lg-4 col-md-4 col-sm-6 team" data-toggle="modal" data-target="#myModal">
-        	    <div className="row">
-        	    	<div className="col-md-4">
-        	    		<img className="img-responsive mt-30 ml-10" src={require("../../image/topic/mobile.png")} alt=""/>
-        	    	</div>
-
-        	    	<div className="col-md-8">
-        	    		<div className="text-center">
-        	    		    <div className="team-description">
-        	    		        <h4>Martin Smith</h4>
-        	    		        <span>Web Designer</span>
-        	    		        <p>Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt</p>
-        	    		    </div>
-        	    		</div>
-
-        	    	</div>
-
-        	    </div>
-        	</div>
+	        <LearningTopicsMap posts={posts} />
         </div>
-
         <div className="container">
         {/* Modal */}
         <div className="modal fade" id="myModal" role="dialog">

@@ -26,7 +26,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Banner />
+       <Banner />
         {/*Quote: {this.renderQuoteContent()}*/}
         {/*Future Events: {this.renderTimeLineContent()}*/}
         <TimeLine />
