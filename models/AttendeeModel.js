@@ -19,5 +19,5 @@ var attendeeSchema=mongoose.Schema({
   // PointsAccumulated:Number
 });
 
-var attendeeModel=mongoose.model('Attendee',attendeeSchema);
+var attendeeModel=mongoose.model('Attendee',attendeeSchema,'Attendees');
 module.exports.Attendee = attendeeModel;

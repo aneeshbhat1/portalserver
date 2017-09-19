@@ -68,7 +68,7 @@ class TimeLine extends Component {
                         </div>
                         <div className="entry-meta">
                           <a href="">
-                            <i className="fa fa-user" /> By the Shiva
+                            <i className="fa fa-user" /> {event.Host.Name}
                           </a>
                           <a href="">
                             <i className="fa fa-comments-o" /> 5 Comments
@@ -79,13 +79,7 @@ class TimeLine extends Component {
                         </div>
                         <div className="entry-content mt-20 mb-30">
                           <p>
-                            Lorem ipsum dolor sit amet of Lorem Ipsum. Proin
-                            gravida nibh vel velit auctor aliquet. Aenean
-                            sollicitudin, lorem quis bibendum auctor, nisi elit
-                            consequat ipsum, nec sagittis sem nibh id elit. Duis
-                            sed odio sit amet nibh vulputate cursus a sit amet
-                            mauris. Morbi accumsan ipsum velit. Nam nec tellus a
-                            odio tincidunt pharetra.
+                           {event.DetailedDescription}
                           </p>
                         </div>
                         <div className="entry-share clearfix">
@@ -150,8 +144,8 @@ class TimeLine extends Component {
   }
 }
 
-function mapStateToProps({ eventList }) {
-  return { eventList }
+function mapStateToProps({ eventList, auth }) {
+  return { eventList, auth }
 }
 
 export default connect(mapStateToProps, actions)(TimeLine)

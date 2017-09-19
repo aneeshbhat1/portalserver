@@ -6,7 +6,7 @@ var Query = require('../models/QueryModel.js');
 
 var eventSchema=mongoose.Schema({
   Name:String,
-  EventDate:Date,
+  EventDate:String,
   Duration:Number,
   Type:String, // Technical, Infrastructure, SoftSkills
   Tags:[String], // Web, Mobile, App etc
@@ -16,11 +16,11 @@ var eventSchema=mongoose.Schema({
   MaxAttendees:Number,
   Venue:{ type: mongoose.Schema.Types.ObjectId, ref: 'Address' },
   Attendees:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Attendee' }],
-  Feedback:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Feedback' }],
+  //Feedback:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Feedback' }],
   //EvaluationQuestions:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Query' }],
   CourseContent: String,
   RecordedVideo: String
 });
 
-var eventModel=mongoose.model('Event',eventSchema);
+var eventModel=mongoose.model('Event',eventSchema,'Events');
 module.exports.Event = eventModel;
