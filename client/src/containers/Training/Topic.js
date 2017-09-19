@@ -31,7 +31,6 @@ function LearningTopicsMap(props) {
     <div
       className="col-lg-6 col-md-6 col-sm-6 team mb-20"
       onClick={() => handleClick(index, post)}
-      key={index}
     >
       <div className="row">
         <div className="col-md-4">
@@ -93,7 +92,9 @@ function LearningTopicsMap(props) {
 // data-toggle="modal" data-target="#myModal" // don' delete
 class Topic extends Component {
   componentDidMount() {
-    this.props.fetchTrainings()
+    if (!this.props.eventList) {
+      this.props.fetchTrainings()
+    }
   }
   renderTrainingList() {
     switch (this.props.eventList) {

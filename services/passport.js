@@ -28,7 +28,16 @@ passport.use(
       if (existingUser) {
         return done(null, existingUser)
       }
-      const user = await new User({ googleId: profile.id }).save()
+      const user = await new User({
+        googleId: profile.id,
+        Name: "",
+        TeamName: "",
+        Domain: "",
+        EmailId: "",
+        LinkedIn: "",
+        Twitter: "",
+        AttendeeType: ["Speaker"]
+      }).save()
       done(null, user)
     }
   )

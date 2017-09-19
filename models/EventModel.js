@@ -3,6 +3,7 @@ var Attendee = require('../models/AttendeeModel.js');
 var Address = require('../models/AddressModel.js');
 var Feedback = require('../models/FeedbackModel.js');
 var Query = require('../models/QueryModel.js');
+var User = require('../models/User.js')
 
 var eventSchema=mongoose.Schema({
   Name:String,
@@ -12,11 +13,11 @@ var eventSchema=mongoose.Schema({
   Type:String, // Technical, Infrastructure, SoftSkills
   Tags:[String], // Web, Mobile, App etc
   Level: String, // Begineer, Intermediate, Advanced
-  Host:{ type: mongoose.Schema.Types.ObjectId, ref: 'Attendee' },
+  Host:{ type: mongoose.Schema.Types.ObjectId, ref: 'users' },
   DetailedDescription:String,
   MaxAttendees:Number,
   Venue:String,
-  Attendees:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Attendee' }],
+  Attendees:[{ type: mongoose.Schema.Types.ObjectId, ref: 'users' }],
   //Feedback:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Feedback' }],
   //EvaluationQuestions:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Query' }],
   CourseContent: String,

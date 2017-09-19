@@ -13,5 +13,17 @@ module.exports = app => {
         }
         res.json(events)
       })
-  })
+  }),
+    app.post("/api/registerForEvent", async (req, res) => {
+      eventModel.Event
+        .find({})
+        .populate("Attendees")
+        .populate("Host")
+        .exec((err, events) => {
+          if (err) {
+            res.send(err)
+          }
+          res.json(events)
+        })
+    })
 }

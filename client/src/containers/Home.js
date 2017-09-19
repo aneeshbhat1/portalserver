@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import * as actions from "../actions"
-import { Banner } from "../components/Banner"
+import Banner from "../components/Banner"
 // import client1 from "../image/clients/01.png"
 // import client2 from "../image/clients/02.png"
 

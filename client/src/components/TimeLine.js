@@ -50,7 +50,7 @@ class TimeLine extends Component {
     return levelCollection[level]
   }
   renderTimeLineContent() {
-    switch (this.props.eventList) {
+    switch (this.props.futureEventList) {
       case null:
         return (
           <div>
@@ -380,7 +380,7 @@ class TimeLine extends Component {
                 {" "}
                 <span> Upcoming events </span>
               </li>
-              {this.props.eventList.map((event, index) => {
+              {this.props.futureEventList.map((event, index) => {
                 return (
                   <li
                     key={index}
@@ -434,7 +434,7 @@ class TimeLine extends Component {
                         <div className="entry-content mt-20 mb-30">
                           <p>{event.DetailedDescription}</p>
                         </div>
-                        <div className="entry-share clearfix">
+                        <div className="entry-share clearfix" style={{display:'none'}}>
                           <a className="button-small pull-left" href="">
                             <span className="disabled">Read More</span>
                             <i className="fa fa-hand-o-right" />
@@ -498,8 +498,8 @@ class TimeLine extends Component {
   }
 }
 
-function mapStateToProps({ eventList }) {
-  return { eventList }
+function mapStateToProps({ futureEventList }) {
+  return { futureEventList }
 }
 
 export default connect(mapStateToProps, actions)(TimeLine)
