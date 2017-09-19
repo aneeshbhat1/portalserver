@@ -5,13 +5,12 @@ import * as actions from "../actions"
 
 import Header from "./Header"
 import Home from "./Home"
-import Footer from "./Footer"
+
 import Speaker from "./Training/Speaker"
 import Topic from "./Training/Topic"
 import SoftskillTopic from "./SoftskillTopic"
-import Contact from "./Contact"
 import PageNotFound from "./PageNotFound"
-
+import Footer from "./Footer"
 class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
