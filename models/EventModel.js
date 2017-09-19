@@ -8,13 +8,14 @@ var eventSchema=mongoose.Schema({
   Name:String,
   EventDate:String,
   Duration:Number,
+  DurationType: String,
   Type:String, // Technical, Infrastructure, SoftSkills
   Tags:[String], // Web, Mobile, App etc
-  Level: Number, // Begineer, Intermediate, Advanced
+  Level: String, // Begineer, Intermediate, Advanced
   Host:{ type: mongoose.Schema.Types.ObjectId, ref: 'Attendee' },
   DetailedDescription:String,
   MaxAttendees:Number,
-  Venue:{ type: mongoose.Schema.Types.ObjectId, ref: 'Address' },
+  Venue:String,
   Attendees:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Attendee' }],
   //Feedback:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Feedback' }],
   //EvaluationQuestions:[{ type: mongoose.Schema.Types.ObjectId, ref: 'Query' }],

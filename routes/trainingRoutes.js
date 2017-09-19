@@ -1,16 +1,23 @@
-
+var mongoose = require("mongoose")
+var eventModel = require("../models/EventModel.js")
 
 module.exports = app => {
   app.get("/api/trainings", async (req, res) => {
-
-    let trainingType = req.query.trainingType;
-
-    const trainingList = {
-      Name:"Test Training",
-      Venue:"Blr"
-    }
-
-    // const training = await Training.find();
-    res.send(trainingList);
+    eventModel.Event
+      .find({
+        $or: [
+          { Type: "Technical" },
+          { Type: "Softskills" },
+          { Type: "Infrastructure" }
+        ]
+      })
+      .populate("Attendees")
+      .populate("Host")
+      .exec((err, events) => {
+        if (err) {
+          res.send(err)
+        }
+        res.json(events)
+      })
   })
 }

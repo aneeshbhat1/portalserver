@@ -7,7 +7,8 @@ var attendeeSchema=mongoose.Schema({
   Domain: String,
   EmailId: String,
   LinkedIn: String,
-  Twitter: String
+  Twitter: String,
+  AttendeeType: [String]
   // Profession:String,
   // Company:String,
   // Designation:String,
