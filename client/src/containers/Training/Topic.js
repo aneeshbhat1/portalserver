@@ -7,14 +7,14 @@ const posts = [
       "catagory" : "Catagory: Design/Dev",
       "image" : "01",
       "link" : "marksmith",
-      "content" : "Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
+      "content" : "Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
    },
    {
       "TopicName" : "Web Development",
       "catagory" : "Catagory: Design/Dev",
       "image" : "01",
       "link" : "marksmith",
-      "content" : "Sed hendrerit enim t enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eus vel mauris tinci dunt tincidunt"
+      "content" : "Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
    }
 ];
 
@@ -39,9 +39,9 @@ function LearningTopicsMap(props) {
                   <p><b>Duration:</b> 1hour 30minites</p>
                   <div className="tags"> <p><b>Tag:</b> </p>
                      <ul>
-                      <li><a href="#">Bootstrap</a></li>
-                      <li><a href="#">HTML5</a></li>
-                      <li><a href="#">Wordpress</a></li>
+                      <li><a href="">Bootstrap</a></li>
+                      <li><a href="">HTML5</a></li>
+                      <li><a href="">Wordpress</a></li>
                     </ul>
                   </div>
                   <p><b>Level:</b> Beginner</p>
@@ -49,7 +49,7 @@ function LearningTopicsMap(props) {
                   <p><b>About:</b> {post.content}</p>
                   <p><b>Seats left:  <span>10</span></b></p>
                   <p><b>Venue:</b> Dark Room</p>
-	    		        <a className="button-small pull-right"href=''><span>Enroll now</span><i className="fa fa-hand-o-right" /></a>
+	    		        {/*<a className="button-small pull-right"href=''><span>Enroll now</span><i className="fa fa-hand-o-right" /></a>*/}
 	    		    </div>
 	    		</div>
 
