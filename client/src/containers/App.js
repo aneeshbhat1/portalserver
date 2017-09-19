@@ -28,7 +28,6 @@ class App extends Component {
               <Route exact path="/training/topics" component={Topic} />
               <Route exact path="/topics/softskills" component={SoftskillTopic} />
               <Route exact path="/speakers" component={Speaker} />
-              <Route exact path="/contact" component={Contact} />
               <Route component={PageNotFound} />
             </Switch>
             <Footer />

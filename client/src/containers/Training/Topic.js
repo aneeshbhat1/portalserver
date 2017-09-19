@@ -7,20 +7,17 @@ const posts = [
       "catagory" : "Catagory: Design/Dev",
       "image" : "01",
       "link" : "marksmith",
-      "content" : "Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
+      "content" : "Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
    },
    {
       "TopicName" : "Web Development",
       "catagory" : "Catagory: Design/Dev",
       "image" : "01",
       "link" : "marksmith",
-      "content" : "Sed hendrerit enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
+      "content" : "Sed hendrerit enim t enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eus vel mauris tinci dunt tincidunt"
    }
 ];
 
-function LearningTopicsModel(props) {
-
-}
 
 function LearningTopicsMap(props) {
 	function handleClick(pro, post) {

@@ -189,7 +189,6 @@ class Speakers extends Component {
             </section>
           </div>
           )
-        debugger;
       case false:
         return
       default:

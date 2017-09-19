@@ -60,7 +60,7 @@ class Header extends Component {
                     <li className="dropdown disabled">
                               <a className="dropdown-toggle" data-toggle="dropdown" href=""><i className="fa fa-rss fa-indicator" /> Blog</a>
                             </li>
-                    <li className="disabled"><NavLink  to="/contact"><i className="fa fa-envelope-o fa-indicator" /> Contact</NavLink></li>
+                    <li className="disabled"><a><i className="fa fa-envelope-o fa-indicator" /> Contact</a></li>
                     {this.renderContent()}
                   </ul>
                 </div>{/*/.nav-collapse */}
