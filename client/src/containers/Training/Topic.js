@@ -2,25 +2,6 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import * as actions from "../../actions"
 
-const posts = [
-  {
-    TopicName: "Mobile Development",
-    catagory: "Catagory: Design/Dev",
-    image: "01",
-    link: "marksmith",
-    content:
-      "Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
-  },
-  {
-    TopicName: "Web Development",
-    catagory: "Catagory: Design/Dev",
-    image: "01",
-    link: "marksmith",
-    content:
-      "Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt Sed hendrerit enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. et enim non justo posuere placerat. eget purus vel mauris tinci dunt tincidunt"
-  }
-]
-
 function LearningTopicsMap(props) {
   function handleClick(pro, post) {
     //e.preventDefault();
@@ -31,6 +12,7 @@ function LearningTopicsMap(props) {
     <div
       className="col-lg-6 col-md-6 col-sm-6 team mb-20"
       onClick={() => handleClick(index, post)}
+      key={index}
     >
       <div className="row">
         <div className="col-md-4">
@@ -54,8 +36,8 @@ function LearningTopicsMap(props) {
                   <b>Tag:</b>{" "}
                 </p>
                 <ul>
-                  {post.Tags.map(tag => (
-                    <li>
+                  {post.Tags.map((tag, index) => (
+                    <li key={index}>
                       <a href="">{tag}</a>
                     </li>
                   ))}

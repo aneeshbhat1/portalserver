@@ -30,7 +30,7 @@ export const fetchSpeakers = () => async dispatch => {
   dispatch({ type: FETCH_SPEAKERS, payload: res.data })
 }
 
-export const postRegistration = () => async dispatch => {
-  const res = await axios.post("/api/speakers", {})
-  dispatch({ type: FETCH_SPEAKERS, payload: res.data })
+export const postRegistration = (eventId) => async dispatch => {
+  const res = await axios.post("/api/registerForEvent", {"eventId": eventId})
+  dispatch({ type: FETCH_TRAININGS, payload: res.data })
 }

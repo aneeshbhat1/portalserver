@@ -36,8 +36,18 @@ function whichStage(data) {
 class Parent extends React.Component {
   constructor(props, context) {
     super(props, context)
+    const attendees = props.attendees
+    let activeState = 0
+    if (props.auth) {
+      for (let i = 0; i < attendees.length; i++) {
+        if (attendees[i]._id === props.auth._id) {
+          activeState = 2
+        }
+      }
+    }
+
     this.state = {
-      active: 0,
+      active: activeState,
       handlerNext: "Enroll Here",
       handlerBack: "Back"
     }
@@ -47,6 +57,7 @@ class Parent extends React.Component {
 
   handleClickIncrement() {
     if (this.state.active === 1) {
+      this.props.postRegistrationEvent(this.props.eventId)
     }
     this.setState({
       active: this.state.active + 1
@@ -255,9 +266,16 @@ class ParticlesRunner extends React.Component {
   }
 }
 class Banner extends Component {
+  constructor(props, context) {
+    super(props, context)
+    this.state = {
+      active: 0
+    }
+  }
   componentDidMount() {
     this.props.fetchTrainings()
   }
+
   renderUpcomingEvent() {
     switch (this.props.eventList) {
       case null:
@@ -266,9 +284,30 @@ class Banner extends Component {
         return
       default:
         return (
-          <h2 className="text-white text-uppercase">
-            {this.props.eventList[0].Name}
-          </h2>
+          <section className="banner">
+            <div className="col-md-6">
+              <div className="owl-carousel-1">
+                <div className="item">
+                  <div className="slider-contents slide-1 text-center">
+                    <h2 className="text-white text-uppercase">
+                      {this.props.eventList[0].Name}
+                    </h2>
+                    <p className="text-white">
+                      We are a creative company, who works with passion and love
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 register-2 col-md-offset-2 pad-t-140">
+              <Parent
+                attendees={this.props.eventList[0].Attendees}
+                auth={this.props.auth}
+                eventId={this.props.eventList[0]._id}
+                postRegistrationEvent={this.props.postRegistration}
+              />
+            </div>
+          </section>
         )
     }
   }
@@ -278,30 +317,14 @@ class Banner extends Component {
         <div className="bgColour">
           <ParticlesRunner />
         </div>
-        <section className="banner">
-          <div className="col-md-6">
-            <div className="owl-carousel-1">
-              <div className="item">
-                <div className="slider-contents slide-1 text-center">
-                  {this.renderUpcomingEvent()}
-                  <p className="text-white">
-                    We are a creative company, who works with passion and love
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 register-2 col-md-offset-2 pad-t-140">
-            <Parent />
-          </div>
-        </section>
+        {this.renderUpcomingEvent()}
       </div>
     )
   }
 }
 
-function mapStateToProps({ eventList }) {
-  return { eventList }
+function mapStateToProps({ eventList, auth }) {
+  return { eventList, auth }
 }
 
 export default connect(mapStateToProps, actions)(Banner)
